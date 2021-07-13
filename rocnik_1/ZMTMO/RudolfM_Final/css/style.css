@@ -1,0 +1,214 @@
+body {
+	margin: 0;
+	background: #b0b7c1;
+	animation-name: pozadie;
+    animation-duration: 5s;
+}
+ul {
+	position: fixed;
+    top: 0;
+    width: 100%;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+    animation-name: navigacia;
+    animation-duration: 5s;
+}
+
+li {
+    float: left;
+    border-right: 1px solid #bbb;
+}
+
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 22px 59.2px;
+    text-decoration: none;
+}
+
+li a:hover {
+    background-color: #db153a;
+}
+.active {
+    background-color: #4CAF50;
+    color: white;
+}
+
+.logo {
+	width: 200px;
+	padding-top: 5px;
+    background-size: 50px, 130px, auto;
+}
+img {
+	width: 800px;
+}
+.author {
+	float: left;
+	width: 100px;
+	height: 130px;
+	border-radius: 50%;
+	margin: 8px 20px;
+	margin-top: 30px;
+	margin-bottom: 0;
+
+}
+.meno {
+	display: block;
+	float: left;
+	margin-bottom: 0px;
+	margin-right: 0px;
+}
+.o {
+	display: block;
+	float: left;
+	width: 660px;
+}
+.social {
+	display: inline;
+	width: 50px;
+	padding: 20px 50px 0px 0px;
+	margin-right: 50px;
+
+}
+h1 {
+	text-align: left;
+	font-size: 40px;
+	font-family: sans-serif;
+}
+article{
+	display: block;
+	width: 800px;
+	margin: 0px auto;
+	text-align: center;
+}
+h1 {
+	text-align: left;
+	font-size: 40px;
+	font-family: sans-serif;
+	margin-bottom: 15px;
+
+}
+footer {
+	display: block;
+	width: 800px;
+	margin: 20px auto;
+	text-align: center;
+	border-top: 2px solid black;
+}
+p{
+	font-size: 16px;
+	font-family: sans-serif;
+	text-align: left;
+}
+th, td {
+    padding: 15px;
+    text-align: left;
+}
+table {
+    border-collapse: collapse;
+}
+
+table, th, td {
+    border: 1px solid black;
+}
+th{
+	background: #f78f8a;
+}
+td {
+	background: #ffffff;
+}
+.active {
+    background-color: #db153a;
+    color: white;
+}
+.fb {
+	padding-top: 50px;
+	padding-right: 20px;
+	width: 400px;
+	float: left;
+}
+.ig{
+	padding-top: 50px;
+	width: 380px;
+	height: 212px;
+	float: left;
+}
+.yt{
+	padding-top: 20px;
+	}
+.hr{
+	width: auto;
+}
+h2{
+	text-align: left;
+}
+audio {
+	padding-right: 525px;
+}
+div.gallery {
+    margin: 5px;
+    border: 1px solid #ccc;
+    float: left;
+    width: 180px;
+}
+
+div.gallery:hover {
+    border: 1px solid #777;
+}
+
+div.gallery img {
+    width: 100%;
+    height: auto;
+}
+
+div.desc {
+    padding: 15px;
+    text-align: center;
+}
+.navigacia {
+	padding: 0 0;
+	margin: 0 0;
+}
+input
+textarea{
+	background: #fff;
+	border: none;
+	padding: 15px 20px;
+	margin: 15px;
+	border-radius: 4px;
+
+}
+textarea{
+	width: 790px;
+	margin-top: 0px;
+
+}
+.send{
+	float: right;
+	margin-bottom: 25px;
+}
+.search{
+	margin: 35px 0px 0px 90px;
+}
+.jazyk{
+	padding: 75px 0px 0px 15px;
+}
+.jazyk a{
+	text-decoration: none;
+}
+.jazyk a:hover{
+	text-decoration: underline;
+}
+@keyframes pozadie {
+    from {background-color: grey;}
+    to {background-color: black;}
+}
+@keyframes navigacia {
+    from {background-color: black;}
+    to {background-color: grey;}
+}
+.mySlides {display:none;}
