@@ -1,0 +1,803 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for contracts/contract_starter.sol</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../prettify.css" />
+    <link rel="stylesheet" href="../base.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class='wrapper'>
+  <div class='pad1'>
+    <h1>
+      <a href="../index.html">all files</a> / <a href="index.html">contracts/</a> contract_starter.sol
+    </h1>
+    <div class='clearfix'>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">24.69% </span>
+        <span class="quiet">Statements</span>
+        <span class='fraction'>20/81</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">9.09% </span>
+        <span class="quiet">Branches</span>
+        <span class='fraction'>4/44</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">47.06% </span>
+        <span class="quiet">Functions</span>
+        <span class='fraction'>8/17</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">22.62% </span>
+        <span class="quiet">Lines</span>
+        <span class='fraction'>19/84</span>
+      </div>
+    </div>
+  </div>
+  <div class='status-line low'></div>
+<pre><table class="coverage">
+<tr><td class="line-count quiet">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94
+95
+96
+97
+98
+99
+100
+101
+102
+103
+104
+105
+106
+107
+108
+109
+110
+111
+112
+113
+114
+115
+116
+117
+118
+119
+120
+121
+122
+123
+124
+125
+126
+127
+128
+129
+130
+131
+132
+133
+134
+135
+136
+137
+138
+139
+140
+141
+142
+143
+144
+145
+146
+147
+148
+149
+150
+151
+152
+153
+154
+155
+156
+157
+158
+159
+160
+161
+162
+163
+164
+165
+166
+167
+168
+169
+170
+171
+172
+173
+174
+175
+176
+177
+178
+179
+180
+181
+182
+183
+184
+185
+186
+187
+188
+189
+190
+191
+192
+193
+194
+195
+196
+197
+198
+199
+200
+201
+202
+203
+204
+205
+206
+207
+208
+209
+210
+211
+212
+213
+214
+215
+216
+217
+218
+219
+220
+221
+222
+223
+224
+225
+226
+227
+228
+229
+230
+231
+232
+233
+234
+235
+236
+237
+238
+239
+240
+241
+242
+243
+244
+245
+246
+247</td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">pragma solidity &gt;=0.4.22 &lt;0.7.0;
+&nbsp;
+//import "https://github.com/OpenZeppelin/openzeppelin-contracts/blob/release-v3.0.0/contracts/cryptography/ECDSA.sol";
+import "@openzeppelin/contracts/cryptography/ECDSA.sol";
+&nbsp;
+contract Battleship {
+    using ECDSA for bytes32;
+    uint32 constant BOARD_LEN = 6;
+    // Declare state variables here.
+    // Consider keeping state for:
+    // - player addresses
+    // - whether the game is over
+    // - board commitments
+    // - whether a player has proven 10 winning moves
+    // - whether a player has proven their own board had 10 ships
+    address payable player1 = address(0);
+    address payable player2 = address(0);
+    bool gameOver = false;
+    uint timerStart;
+    uint timerEnd;
+    bool checked_ship;
+&nbsp;
+    mapping (address =&gt; uint) internal playersBids;
+    mapping (address =&gt; bytes32) internal boardCommitments;
+    mapping (address =&gt; uint) internal provedHits;
+    mapping (address =&gt; uint) internal provedShips;
+    mapping (address =&gt; bool) internal playerLeft;
+&nbsp;
+    /*struct State{
+        address payable player1;
+        address payable player2;
+        bool gameOver;
+        uint timerStart;
+        uint timerEnd;
+        bool left;
+    }
+    State internal actualState;
+    State[] internal states;*/
+    // Declare events here.
+    // Consider triggering an event upon accusing another player of having left.
+    event OpponentLeft(address who);
+    // Store the bids of each player
+    // Start the game when both bids are received
+    // The first player to call the function determines the bid amount.
+    // Refund excess bids to the second player if they bid too much.
+    function store_bid() public payable{
+        <span class="missing-if-branch" title="else path not taken" >E</span>if (player1 == address(0)){
+            player1 = msg.sender;
+            playersBids[player1] = msg.value;
+        }
+        else{
+<span class="cstat-no" title="statement not covered" >            player2 = msg.sender</span>;
+<span class="cstat-no" title="statement not covered" >            playersBids[player2] = msg.value</span>;
+        }
+        <span class="missing-if-branch" title="if path not taken" >I</span>if(player1 != address(0) &amp;&amp; player2 != address(0)){
+<span class="cstat-no" title="statement not covered" >            require(playersBids[player2] &gt;= playersBids[player1], "Player1 bids more than Player2")</span>;
+<span class="cstat-no" title="statement not covered" >            uint valueRefund = playersBids[player2] - playersBids[player1];</span>
+<span class="cstat-no" title="statement not covered" >            if (valueRefund &gt; 0){</span>
+<span class="cstat-no" title="statement not covered" >                (bool sent, /*bytes memory data*/) = player2.call{value: address(this).balance}("");</span>
+<span class="cstat-no" title="statement not covered" >                require(sent, "Failed to send Ether")</span>;
+            }
+        }
+    }
+&nbsp;
+    // Clear state - make sure to set that the game is not in session
+<span class="fstat-no" title="function not covered" >    function clear_state() internal {</span>
+<span class="cstat-no" title="statement not covered" >        require(gameOver, "game is still in session")</span>;
+<span class="cstat-no" title="statement not covered" >        playersBids[player1] = 0</span>;
+<span class="cstat-no" title="statement not covered" >        playersBids[player2] = 0</span>;
+<span class="cstat-no" title="statement not covered" >        provedHits[player1] = 0</span>;
+<span class="cstat-no" title="statement not covered" >        provedHits[player2] = 0</span>;
+<span class="cstat-no" title="statement not covered" >        provedShips[player1] = 0</span>;
+<span class="cstat-no" title="statement not covered" >        provedShips[player2] = 0</span>;
+<span class="cstat-no" title="statement not covered" >        boardCommitments[player1] = 0</span>;
+<span class="cstat-no" title="statement not covered" >        boardCommitments[player2] = 0</span>;
+<span class="cstat-no" title="statement not covered" >        player1 = address(0)</span>;
+<span class="cstat-no" title="statement not covered" >        player2 = address(0)</span>;
+<span class="cstat-no" title="statement not covered" >        gameOver = false</span>;
+    }
+&nbsp;
+    // Store the initial board commitments of each player
+    // Note that merkle_root is the hash of the topmost value of the merkle tree
+<span class="fstat-no" title="function not covered" >    function store_board_commitment(bytes32 merkle_root) public {</span>
+<span class="cstat-no" title="statement not covered" >        require(msg.sender == player1 || msg.sender == player2, "not valid adress")</span>;
+<span class="cstat-no" title="statement not covered" >        boardCommitments[msg.sender] = merkle_root</span>;
+    }
+&nbsp;
+    // Verify the placement of one ship on a board
+    // opening_nonce - corresponds to web3.utils.fromAscii(JSON.stringify(opening) + JSON.stringify(nonce)) in JS
+    // proof - a list of sha256 hashes you can get from get_proof_for_board_guess
+    // guess_leaf_index - the index of the guess as a leaf in the merkle tree
+    // owner - the address of the owner of the board on which this ship lives
+    function check_one_ship(bytes memory opening_nonce, bytes32[] memory proof,
+        uint256 guess_leaf_index, address owner) public returns (bool result) {
+        checked_ship =  verify_opening(opening_nonce, proof, guess_leaf_index, boardCommitments[owner]);
+        <span class="missing-if-branch" title="if path not taken" >I</span>if(owner == msg.sender &amp;&amp; result){
+<span class="cstat-no" title="statement not covered" >            provedShips[msg.sender] += 1</span>;
+        }
+        else <span class="missing-if-branch" title="if path not taken" >I</span>if(result){
+<span class="cstat-no" title="statement not covered" >            provedHits[msg.sender] += 1</span>;
+        }
+        result = checked_ship;
+        return result;
+    }
+&nbsp;
+    // Claim you won the game
+    // If you have checked 10 winning moves (hits) AND you have checked
+    // 10 of your own ship placements with the contract, then this function
+    // should transfer winning funds to you and end the game.
+<span class="fstat-no" title="function not covered" >    function claim_win() public {</span>
+<span class="cstat-no" title="statement not covered" >        require(provedShips[msg.sender] == 10 &amp;&amp; provedHits[msg.sender] == 10, "not enought hits or placed ships")</span>;
+<span class="cstat-no" title="statement not covered" >        (bool sent, /*bytes memory data*/) = msg.sender.call{value: address(this).balance}("");</span>
+<span class="cstat-no" title="statement not covered" >        require(sent, "Failed to send Ether")</span>;
+<span class="cstat-no" title="statement not covered" >        gameOver = true</span>;
+<span class="cstat-no" title="statement not covered" >        clear_state()</span>;
+    }
+&nbsp;
+    // Forfeit the game
+    // Regardless of cheating, board state, or any other conditions, this function
+    // results in all funds being sent to the opponent and the game being over.
+<span class="fstat-no" title="function not covered" >    function forfeit(address payable opponent) public {</span>
+<span class="cstat-no" title="statement not covered" >        require((msg.sender == player1 || msg.sender == player2) &amp;&amp; (opponent == player1 || opponent == player2), "invalid address")</span>;
+<span class="cstat-no" title="statement not covered" >        (bool sent, /*bytes memory data*/) = opponent.call{value: address(this).balance}("");</span>
+<span class="cstat-no" title="statement not covered" >        require(sent, "Failed to send Ether")</span>;
+<span class="cstat-no" title="statement not covered" >        gameOver = true</span>;
+<span class="cstat-no" title="statement not covered" >        clear_state()</span>;
+    }
+&nbsp;
+    // Claim the opponent cheated - if true, you win.
+    // opening_nonce - corresponds to web3.utils.fromAscii(JSON.stringify(opening) + JSON.stringify(nonce)) in JS
+    // proof - a list of sha256 hashes you can get from get_proof_for_board_guess (this is what the sender believes to be a lie)
+    // guess_leaf_index - the index of the guess as a leaf in the merkle tree
+    // owner - the address of the owner of the board on which this ship lives
+<span class="fstat-no" title="function not covered" >    function accuse_cheating(bytes memory opening_nonce, bytes32[] memory proof,</span>
+        uint256 guess_leaf_index, address owner) public returns (bool result) {
+<span class="cstat-no" title="statement not covered" >        require((msg.sender == player1 || msg.sender == player2) &amp;&amp; (owner == player1 || owner == player2))</span>;
+<span class="cstat-no" title="statement not covered" >        result = verify_opening(opening_nonce, proof, guess_leaf_index, boardCommitments[owner])</span>;
+<span class="cstat-no" title="statement not covered" >        if (!result){</span>
+<span class="cstat-no" title="statement not covered" >            (bool sent, /*bytes memory data*/) = msg.sender.call{value: address(this).balance}("");</span>
+<span class="cstat-no" title="statement not covered" >            require(sent, "Failed to send Ether")</span>;
+        }
+        
+<span class="cstat-no" title="statement not covered" >        return result;</span>
+    }
+&nbsp;
+    // Claim the opponent of taking too long/leaving
+    // Trigger an event that both players should listen for.
+<span class="fstat-no" title="function not covered" >    function claim_opponent_left(address opponent) public {</span>
+<span class="cstat-no" title="statement not covered" >        require(!playerLeft[opponent] &amp;&amp; !playerLeft[msg.sender] &amp;&amp; (opponent == player1 || opponent == player2), "invalid address or you have to handle a timeout accusation")</span>;
+<span class="cstat-no" title="statement not covered" >        timerStart = now</span>;
+<span class="cstat-no" title="statement not covered" >        timerEnd = timerStart + 60</span>;
+<span class="cstat-no" title="statement not covered" >        playerLeft[opponent] = true</span>;
+<span class="cstat-no" title="statement not covered" >        emit OpponentLeft(opponent);</span>
+    }
+&nbsp;
+    // Handle a timeout accusation - msg.sender is the accused party.
+    // If less than 1 minute has passed, then set state appropriately to prevent distribution of winnings.
+    // Otherwise, do nothing.
+<span class="fstat-no" title="function not covered" >    function handle_timeout(address payable opponent) public {</span>
+<span class="cstat-no" title="statement not covered" >        require(now &lt;= timerEnd &amp;&amp; (msg.sender == player1 || msg.sender == player2),"time has run out or invalid address")</span>;
+<span class="cstat-no" title="statement not covered" >        playerLeft[msg.sender] = false</span>;
+    }
+&nbsp;
+    // Claim winnings if opponent took too long/stopped responding after claim_opponent_left
+    // The player MUST claim winnings. The opponent failing to handle the timeout on their end should not
+    // result in the game being over. If the timer has not run out, do nothing.
+<span class="fstat-no" title="function not covered" >    function claim_timeout_winnings(address opponent) public {</span>
+<span class="cstat-no" title="statement not covered" >        require(playerLeft[opponent] &amp;&amp; now &gt;= timerEnd, "timer has not run out")</span>;
+<span class="cstat-no" title="statement not covered" >        (bool sent, /*bytes memory data*/) = msg.sender.call{value: address(this).balance}("");</span>
+<span class="cstat-no" title="statement not covered" >        require(sent, "Failed to send Ether")</span>;
+<span class="cstat-no" title="statement not covered" >        gameOver = true</span>;
+<span class="cstat-no" title="statement not covered" >        clear_state()</span>;
+    }
+&nbsp;
+    // Check if game is over
+    // Hint - use a state variable for this, so you can call it from JS.
+    // Note - you cannot use the return values of functions that change state in JS.
+    function is_game_over() public view returns (bool) {
+        return gameOver;
+    }
+&nbsp;
+    function get_players() public view returns (address, address){
+        return (player1, player2);
+    }
+&nbsp;
+    function get_checked_ship() public view returns (bool){
+        return checked_ship;
+    }
+&nbsp;
+    function get_ships_count() public view returns (uint){
+        return provedShips[msg.sender];
+    }
+&nbsp;
+    function get_player_bid() public view returns (uint){
+        return playersBids[msg.sender];
+    }
+&nbsp;
+    /**** Helper Functions below this point. Do not modify. ****/
+    /***********************************************************/
+&nbsp;
+<span class="fstat-no" title="function not covered" >    function merge_bytes32(bytes32 a, bytes32 b) pure public returns (bytes memory) {</span>
+<span class="cstat-no" title="statement not covered" >        bytes memory result = new bytes(64);</span>
+        assembly {
+            mstore(add(result, 32), a)
+            mstore(add(result, 64), b)
+        }
+<span class="cstat-no" title="statement not covered" >        return result;</span>
+    }
+&nbsp;
+    // Verify the proof of a single spot on a single board
+    // \args:
+    //      opening_nonce - corresponds to web3.utils.fromAscii(JSON.stringify(opening) + JSON.stringify(nonce)));
+    //      proof - list of sha256 hashes that correspond to output from get_proof_for_board_guess()
+    //      guess - [i, j] - guess that opening corresponds to
+    //      commit - merkle root of the board
+    function verify_opening(bytes memory opening_nonce, bytes32[] memory proof, uint guess_leaf_index, bytes32 commit) public view returns (bool result) {
+        bytes32 curr_commit = keccak256(opening_nonce); // see if this changes hash
+        uint index_in_leaves = guess_leaf_index;
+&nbsp;
+        uint curr_proof_index = 0;
+        uint i = 0;
+&nbsp;
+        while (curr_proof_index &lt; proof.length) {
+            // index of which group the guess is in for the current level of Merkle tree
+            // (equivalent to index of parent in next level of Merkle tree)
+<span class="cstat-no" title="statement not covered" >            uint group_in_level_of_merkle = index_in_leaves / (2**i);</span>
+            // index in Merkle group in (0, 1)
+<span class="cstat-no" title="statement not covered" >            uint index_in_group = group_in_level_of_merkle % 2;</span>
+            // max node index for currrent Merkle level
+<span class="cstat-no" title="statement not covered" >            uint max_node_index = ((BOARD_LEN * BOARD_LEN + (2**i) - 1) / (2**i)) - 1;</span>
+            // index of sibling of curr_commit
+<span class="cstat-no" title="statement not covered" >            uint sibling = group_in_level_of_merkle - index_in_group + (index_in_group + 1) % 2;</span>
+            i++;
+<span class="cstat-no" title="statement not covered" >            if (sibling &gt; max_node_index) continue;</span>
+<span class="cstat-no" title="statement not covered" >            if (index_in_group % 2 == 0) {</span>
+<span class="cstat-no" title="statement not covered" >                curr_commit = keccak256(merge_bytes32(curr_commit, proof[curr_proof_index]))</span>;
+                curr_proof_index++;
+            } else {
+<span class="cstat-no" title="statement not covered" >                curr_commit = keccak256(merge_bytes32(proof[curr_proof_index], curr_commit))</span>;
+                curr_proof_index++;
+            }
+        }
+        return (curr_commit == commit);
+&nbsp;
+    }
+}
+&nbsp;</pre></td></tr>
+</table></pre>
+<div class='push'></div><!-- for sticky footer -->
+</div><!-- /wrapper -->
+<div class='footer quiet pad2 space-top1 center small'>
+  Code coverage
+  generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Tue Apr 12 2022 19:45:06 GMT+0200 (Central European Summer Time)
+</div>
+</div>
+<script src="../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="../sorter.js"></script>
+</body>
+</html>
