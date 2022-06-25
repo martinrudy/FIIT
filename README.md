@@ -1,6 +1,6 @@
 # FIIT
 
-1. [Rocnik_1](https://github.com/martinrudy/FIIT/tree/main/rocnik_1) 
+1. [Rocnik 1](https://github.com/martinrudy/FIIT/tree/main/rocnik_1) 
    - [SemAp](https://github.com/martinrudy/FIIT/tree/main/rocnik_1/SemAp) riesenie bludiska v jazyku C
    - [ZMTMO](https://github.com/martinrudy/FIIT/tree/main/rocnik_1/ZMTMO/RudolfM_Final) webova stranka vytvorena podla specifikacii zadania predmetu
    - [ZTIAPL](https://github.com/martinrudy/FIIT/tree/main/rocnik_1/ZTIAP/RudolfM_Final) Browserova hra implementovana v jazyku JavaScript. Blizsia specifikacia v [dokumentacii] (https://github.com/martinrudy/FIIT/blob/main/rocnik_1/ZTIAP/RudolfM_Final/RudolfM_bod2.pdf)
